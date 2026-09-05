@@ -32,6 +32,9 @@ jobs:
           tar -xzf "$ARCHIVE" -C "$TMP_DIR"
           cp -a "$TMP_DIR/matdash-ui-v0.2.0-github-ready/." .
 
+          # The Actions token can update normal repository contents but cannot
+          # add a new workflow file. CI is installed separately after bootstrap.
+          rm -f .github/workflows/ci.yml
           rm -rf .bootstrap
 
           git config user.name "github-actions[bot]"
