@@ -19,11 +19,14 @@ jobs:
         run: |
           set -euo pipefail
 
-          ARCHIVE=".bootstrap/matdash-ui-v0.2.0-github-ready.tar.gz"
-          if [ ! -f "$ARCHIVE" ]; then
-            echo "Bootstrap archive is no longer present; nothing to do."
+          CHUNK_DIR=".bootstrap/chunks"
+          if [ ! -d "$CHUNK_DIR" ]; then
+            echo "Bootstrap chunks are no longer present; nothing to do."
             exit 0
           fi
+
+          ARCHIVE="$(mktemp --suffix=.tar.gz)"
+          cat "$CHUNK_DIR"/part-* > "$ARCHIVE"
 
           TMP_DIR="$(mktemp -d)"
           tar -xzf "$ARCHIVE" -C "$TMP_DIR"
@@ -40,5 +43,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: bootstrap MatDash UI v0.2.0"
+          git commit -m "chore: import MatDash UI v0.2.0 source"
           git push
