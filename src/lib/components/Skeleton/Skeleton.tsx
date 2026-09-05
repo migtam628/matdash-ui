@@ -1,0 +1,1 @@
+import './Skeleton.css'; export function Skeleton({width='100%',height=14,radius=8,className=''}:{width?:string|number;height?:string|number;radius?:string|number;className?:string}){return <span className={`md-skeleton ${className}`} style={{width,height,borderRadius:radius}} aria-hidden="true"/>}

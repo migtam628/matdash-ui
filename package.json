@@ -1,0 +1,68 @@
+{
+  "name": "@matdash/ui",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "description": "Reusable React + TypeScript dashboard component system with accessible interactions, data display primitives, charts, and plain CSS design tokens.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && npm run build:demo && npm run build:lib",
+    "build:demo": "vite build",
+    "build:lib": "tsc -p tsconfig.lib.json && vite build --config vite.lib.config.ts",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview",
+    "release:check": "npm run typecheck && npm run build:lib"
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.468.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "@types/node": "^22.10.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist-lib/matdash-ui.js",
+      "types": "./dist-lib/types/index.d.ts"
+    },
+    "./styles.css": "./dist-lib/matdash-ui.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist-lib"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "tsx",
+    "css",
+    "dashboard",
+    "ui",
+    "component-library",
+    "matdash"
+  ],
+  "license": "MIT",
+  "module": "./dist-lib/matdash-ui.js",
+  "types": "./dist-lib/types/index.d.ts",
+  "style": "./dist-lib/matdash-ui.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migtam628/matdash-ui.git"
+  },
+  "homepage": "https://github.com/migtam628/matdash-ui#readme",
+  "bugs": {
+    "url": "https://github.com/migtam628/matdash-ui/issues"
+  }
+}

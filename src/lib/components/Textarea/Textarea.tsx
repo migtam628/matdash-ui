@@ -1,0 +1,3 @@
+import type { TextareaHTMLAttributes } from 'react'; import './Textarea.css';
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>{label?:string;hint?:string;error?:string;resize?:'none'|'vertical'|'both'}
+export function Textarea({label,hint,error,resize='vertical',className='',id,...props}:TextareaProps){const inputId=id??`md-textarea-${label?.toLowerCase().replace(/[^a-z0-9]+/g,'-')??'field'}`;return <label className={`md-textarea-field ${className}`} htmlFor={inputId}>{label&&<span>{label}</span>}<textarea id={inputId} className={`md-textarea ${error?'is-error':''}`} style={{resize}} {...props}/>{(error||hint)&&<small className={error?'is-error':''}>{error??hint}</small>}</label>}

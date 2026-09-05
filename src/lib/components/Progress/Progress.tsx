@@ -1,0 +1,3 @@
+import './Progress.css';
+export interface ProgressProps{value:number;max?:number;label?:string;showValue?:boolean;tone?:'primary'|'success'|'warning'|'danger'|'info';size?:'sm'|'md'|'lg'}
+export function Progress({value,max=100,label,showValue=false,tone='primary',size='md'}:ProgressProps){const pct=Math.max(0,Math.min(100,(value/max)*100));return <div className="md-progress-wrap">{(label||showValue)&&<div className="md-progress__top"><span>{label}</span>{showValue&&<b>{Math.round(pct)}%</b>}</div>}<div className={`md-progress md-progress--${size}`} role="progressbar" aria-valuemin={0} aria-valuemax={max} aria-valuenow={value}><i className={`md-progress__bar md-progress__bar--${tone}`} style={{width:`${pct}%`}}/></div></div>}

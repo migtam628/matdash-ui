@@ -1,0 +1,1 @@
+.md-skeleton{display:block;background:linear-gradient(90deg,var(--md-surface-2),var(--md-surface-3),var(--md-surface-2));background-size:220% 100%;animation:md-skeleton 1.25s ease-in-out infinite}@keyframes md-skeleton{0%{background-position:100% 0}100%{background-position:-100% 0}}@media(prefers-reduced-motion:reduce){.md-skeleton{animation:none}}

@@ -1,0 +1,3 @@
+import { AlertCircle, CheckCircle2, Info, TriangleAlert } from 'lucide-react'; import type { ReactNode } from 'react'; import './Alert.css';
+export interface AlertProps{title?:ReactNode;children:ReactNode;tone?:'info'|'success'|'warning'|'danger';action?:ReactNode}
+export function Alert({title,children,tone='info',action}:AlertProps){const Icon={info:Info,success:CheckCircle2,warning:TriangleAlert,danger:AlertCircle}[tone];return <div className={`md-alert md-alert--${tone}`} role={tone==='danger'?'alert':'status'}><Icon size={19}/><div>{title&&<b>{title}</b>}<div>{children}</div></div>{action&&<span>{action}</span>}</div>}

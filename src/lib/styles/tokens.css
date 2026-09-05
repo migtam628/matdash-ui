@@ -1,0 +1,89 @@
+:root,
+[data-md-theme="dark"] {
+  --md-bg: #0b1020;
+  --md-bg-elevated: #0e1527;
+  --md-surface: #11192c;
+  --md-surface-2: #151f35;
+  --md-surface-3: #1a2740;
+  --md-border: #26344f;
+  --md-border-soft: #1d2940;
+  --md-text: #f6f8fc;
+  --md-text-secondary: #c3cbd9;
+  --md-muted: #8d9ab0;
+  --md-primary: #7c6cff;
+  --md-primary-strong: #6255ff;
+  --md-primary-soft: rgba(124, 108, 255, 0.14);
+  --md-accent: #2dd4bf;
+  --md-accent-soft: rgba(45, 212, 191, 0.14);
+  --md-info: #38bdf8;
+  --md-info-soft: rgba(56, 189, 248, 0.14);
+  --md-success: #34d399;
+  --md-success-soft: rgba(52, 211, 153, 0.14);
+  --md-warning: #f59e0b;
+  --md-warning-soft: rgba(245, 158, 11, 0.14);
+  --md-danger: #fb7185;
+  --md-danger-soft: rgba(251, 113, 133, 0.14);
+  --md-chart-1: #7c6cff;
+  --md-chart-2: #2dd4bf;
+  --md-chart-3: #fb7185;
+  --md-chart-4: #fbbf24;
+  --md-chart-5: #38bdf8;
+  --md-shadow-sm: 0 1px 2px rgba(0, 0, 0, .16);
+  --md-shadow-md: 0 14px 30px rgba(0, 0, 0, .16);
+  --md-radius-sm: 8px;
+  --md-radius-md: 12px;
+  --md-radius-lg: 18px;
+  --md-radius-xl: 24px;
+  --md-space-1: 4px;
+  --md-space-2: 8px;
+  --md-space-3: 12px;
+  --md-space-4: 16px;
+  --md-space-5: 20px;
+  --md-space-6: 24px;
+  --md-space-8: 32px;
+  --md-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --md-transition: 160ms ease;
+}
+
+[data-md-theme="light"] {
+  --md-bg: #f4f6fb;
+  --md-bg-elevated: #ffffff;
+  --md-surface: #ffffff;
+  --md-surface-2: #f8faff;
+  --md-surface-3: #eef2f8;
+  --md-border: #dfe5ef;
+  --md-border-soft: #edf1f6;
+  --md-text: #172033;
+  --md-text-secondary: #465269;
+  --md-muted: #7c8798;
+  --md-primary-soft: rgba(98, 85, 255, 0.10);
+  --md-accent-soft: rgba(13, 148, 136, 0.10);
+  --md-info-soft: rgba(2, 132, 199, 0.10);
+  --md-success-soft: rgba(22, 163, 74, 0.10);
+  --md-warning-soft: rgba(217, 119, 6, 0.10);
+  --md-danger-soft: rgba(225, 29, 72, 0.10);
+  --md-shadow-sm: 0 1px 2px rgba(15, 23, 42, .05);
+  --md-shadow-md: 0 14px 30px rgba(15, 23, 42, .08);
+}
+
+:root,
+[data-md-theme="dark"],
+[data-md-theme="light"] {
+  --md-focus-ring: 0 0 0 3px var(--md-primary-soft);
+  --md-control-height-sm: 34px;
+  --md-control-height-md: 40px;
+  --md-control-height-lg: 46px;
+  --md-z-dropdown: 70;
+  --md-z-overlay: 80;
+  --md-z-toast: 100;
+  --md-z-command: 95;
+  --md-z-tooltip: 110;
+  --md-overlay: rgba(2, 6, 18, .56);
+  --md-font-size-xs: 11px;
+  --md-font-size-sm: 12px;
+  --md-font-size-md: 14px;
+  --md-font-size-lg: 16px;
+  --md-font-size-xl: 20px;
+  --md-font-size-2xl: 28px;
+  --md-line-height: 1.5;
+}

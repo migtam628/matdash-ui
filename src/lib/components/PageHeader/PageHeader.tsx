@@ -1,0 +1,3 @@
+import type { ReactNode } from 'react'; import './PageHeader.css';
+export interface PageHeaderProps{eyebrow?:ReactNode;title:ReactNode;description?:ReactNode;actions?:ReactNode;breadcrumbs?:ReactNode}
+export function PageHeader({eyebrow,title,description,actions,breadcrumbs}:PageHeaderProps){return <header className="md-page-header">{breadcrumbs&&<div className="md-page-header__breadcrumbs">{breadcrumbs}</div>}<div className="md-page-header__row"><div>{eyebrow&&<div className="md-page-header__eyebrow">{eyebrow}</div>}<h1>{title}</h1>{description&&<p>{description}</p>}</div>{actions&&<div className="md-page-header__actions">{actions}</div>}</div></header>}

@@ -1,0 +1,3 @@
+import type { ReactNode } from 'react'; import './ActivityFeed.css';
+export interface ActivityItem{id:string|number;title:ReactNode;description?:ReactNode;time?:ReactNode;icon?:ReactNode;tone?:'primary'|'success'|'warning'|'danger'|'info'}
+export function ActivityFeed({items}:{items:ActivityItem[]}){return <div className="md-activity">{items.map(item=><div className="md-activity__item" key={item.id}><span className={`md-activity__icon md-activity__icon--${item.tone??'primary'}`}>{item.icon}</span><div className="md-activity__copy"><b>{item.title}</b>{item.description&&<p>{item.description}</p>}</div>{item.time&&<time>{item.time}</time>}</div>)}</div>}

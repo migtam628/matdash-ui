@@ -1,0 +1,5 @@
+.md-icon-button { border: 1px solid transparent; border-radius: var(--md-radius-sm); display: inline-grid; place-items: center; cursor: pointer; transition: all var(--md-transition); }
+.md-icon-button--sm { width: 34px; height: 34px; }.md-icon-button--md { width: 40px; height: 40px; }.md-icon-button--lg { width: 46px; height: 46px; }
+.md-icon-button--ghost { background: transparent; color: var(--md-text-secondary); }.md-icon-button--surface { background: var(--md-surface-2); border-color: var(--md-border); color: var(--md-text-secondary); }.md-icon-button--primary { background: var(--md-primary); color: #fff; }
+.md-icon-button:hover:not(:disabled) { background: var(--md-surface-3); color: var(--md-text); }.md-icon-button--primary:hover:not(:disabled) { background: var(--md-primary-strong); color: white; }
+.md-icon-button:focus-visible { outline: 3px solid var(--md-primary-soft); outline-offset: 2px; }

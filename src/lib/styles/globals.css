@@ -1,0 +1,6 @@
+.md-root,
+.md-root * { box-sizing: border-box; }
+.md-root { font-family: var(--md-font); color: var(--md-text); }
+.md-root button, .md-root input, .md-root select, .md-root textarea { font: inherit; }
+.md-root button { color: inherit; }
+.md-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

@@ -1,0 +1,4 @@
+import type { HTMLAttributes, ReactNode } from 'react'; import './Card.css';
+export interface CardProps extends HTMLAttributes<HTMLElement> { children: ReactNode; variant?: 'default'|'subtle'|'outlined'|'gradient'; padding?: 'none'|'sm'|'md'|'lg'; as?: 'section'|'div'|'article'; }
+export function Card({ children, variant='default', padding='md', as='section', className='', ...props }: CardProps) { const Tag=as; return <Tag className={`md-card md-card--${variant} md-card--pad-${padding} ${className}`} {...props}>{children}</Tag>; }
+export function CardHeader({ title, description, action }: { title: ReactNode; description?: ReactNode; action?: ReactNode }) { return <div className="md-card-header"><div><h3>{title}</h3>{description && <p>{description}</p>}</div>{action && <div className="md-card-header__action">{action}</div>}</div>; }
